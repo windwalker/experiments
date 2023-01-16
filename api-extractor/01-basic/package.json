@@ -1,0 +1,9 @@
+{
+    "name": "awesome-widgets",
+    "version": "1.0.0",
+    "main": "./lib/index.js",
+    "typings": "./lib/index.d.ts",
+    "scripts": {
+      "build": "tsc && api-extractor run --local --verbose"
+    }
+  }

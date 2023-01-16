@@ -1,0 +1,13 @@
+{
+    "name": "awesome-widgets",
+    "version": "1.0.0",
+    "main": "./lib/index.js",
+    "typings": "./lib/index.d.ts",
+    "scripts": {
+        "build": "tsc && api-extractor run --local --verbose",
+        "build:doc": "typedoc --name awesome-widget --tsconfig ./tsconfig_typedoc.json"
+    },
+    "dependencies": {
+        "typedoc": "^0.23.24"
+    }
+}
