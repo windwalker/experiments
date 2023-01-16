@@ -1,0 +1,19 @@
+{
+  "name": "03-rollup-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "rollup -c > index.js && BROWSER=true rollup -c > browser.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^3.10.0",
+    "rollup-plugin-replace": "^2.2.0"
+  },
+  "browser": {
+    "./index.js": "./browser.js"
+  }
+}

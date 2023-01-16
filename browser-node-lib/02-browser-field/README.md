@@ -1,0 +1,3 @@
+输出到npm中，同时有index.js和browser.js两份文件。输出示例在local_node_modules中。
+
+然后node.js和browser.js分别展示如何引入不同的lib文件。node.js通过node运行，会直接寻址到package.json中的main字段。而browser.js则需要先通过webpack打包，打包时，webpack会自动寻址package.json中的browser字段

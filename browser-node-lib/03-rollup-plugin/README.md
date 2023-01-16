@@ -1,0 +1,1 @@
+展示如何通过rollup-replace-plugin，将node和browser的两份源文件合并，然后通过插件构建两次，分别输入不同的环境变量，最终得到两个运行时产物。
