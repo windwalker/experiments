@@ -1,22 +1,37 @@
-import Helper from "./Helper"
+import DrawHelper from "./DrawHelper";
+import InnerSocket from "./InnerSocket";
 
 /**
  * @public
  */
-class MathLib {
-    /**
-     * @public
-     */
-    add(a: number, b: number) {
-        return a + b
-    }
+class SDKEntryClass {
     /**
      * @internal
      */
-    multiply(a: number, b: number) {
-        return a * b
+    socket: InnerSocket
+
+    /**
+     * @internal
+     */
+    constructor() {
+        this.socket = new InnerSocket()
+    }
+    open() {
+        this.socket.connect()
+        return new DrawHelper()
     }
 }
 
-export default MathLib
-export {Helper}
+/**
+ * @public
+ */
+const SDKInstance = {
+    /**
+     * @public
+     */
+    getInstance: function() {
+        return new SDKEntryClass()
+    }
+}
+
+export default SDKInstance

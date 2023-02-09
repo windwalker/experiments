@@ -256,7 +256,7 @@
      * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
      * DEFAULT VALUE: "<projectFolder>/dist/<unscopedPackageName>.d.ts"
      */
-    "publicTrimmedFilePath": "<projectFolder>/dist/src/<unscopedPackageName>.d.ts"
+    "publicTrimmedFilePath": "<projectFolder>/dist/src/<unscopedPackageName>.d.ts",
 
     /**
      * Specifies the output path for a .d.ts rollup file to be generated with trimming for an "alpha" release.
@@ -303,7 +303,7 @@
      *
      * DEFAULT VALUE: false
      */
-    // "omitTrimmingComments": true
+    "omitTrimmingComments": true
   },
 
   /**
@@ -394,6 +394,12 @@
       "default": {
         "logLevel": "warning"
         // "addToApiReportFile": false
+      },
+      "ae-internal-missing-underscore": {
+        "logLevel": "none"
+      },
+      "ae-forgotten-export": {
+        "logLevel": "none"
       }
 
       // "ae-extra-release-tag": {
